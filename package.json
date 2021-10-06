@@ -1,8 +1,8 @@
 {
-  "name": "@volkovnd/initial-vue",
+  "name": "@volkovnd/volkovnd.dev",
   "version": "0.1.0",
   "private": true,
-  "description": "My initial template for Vue projects",
+  "description": "Volkov Nikolay site",
   "author": {
     "name": "Volkov Nikolay",
     "email": "volkovnd@yandex.ru",
@@ -15,23 +15,17 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "bootstrap-vue": "^2.17.3",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.2",
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",
-    "popper.js": "^1.16.1",
-    "portal-vue": "^2.1.7",
     "vue": "^2.6.14",
     "vue-functional-data-merge": "^3.1.0",
-    "vue-router": "^3.5.2",
-    "vuex": "^3.6.2",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
@@ -49,13 +43,12 @@
     "stylelint-config-recess-order": "^2.5.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.21.0",
-    "vue-cli-plugin-bootstrap-vue": "~0.8.2",
     "vue-template-compiler": "^2.6.14"
   },
   "bugs": {
     "url": "https://github.com/volkovnd/initial-template/issues"
   },
-  "homepage": "https://github.com/volkovnd/initial-template#readme",
+  "homepage": "https://volkovnd.dev",
   "keywords": [],
   "license": "MIT",
   "repository": {

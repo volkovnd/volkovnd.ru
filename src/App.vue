@@ -1,56 +1,98 @@
 <template>
   <div id="app">
-    <app-header>
-      <b-container>
-        <h3>Header</h3>
-      </b-container>
-    </app-header>
+    <div class="container">
+      <div class="d-grid">
+        <div class="col-12">
+          <div class="text-center">
+            <h1>Волков Николай</h1>
+          </div>
+        </div>
 
-    <b-navbar id="navigation" toggleable="md" type="dark" variant="dark">
-      <b-container>
-        <b-navbar-toggle target="navigation-collapse"></b-navbar-toggle>
+        <div class="d-flex flex-wrap justify-content-center mb-3">
+          <div class="text-center">
+            <a href="https://github.com/volkovnd" target="_blank">ГитХаб</a>
+          </div>
+        </div>
 
-        <b-collapse id="navigation-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item to="/">Home</b-nav-item>
-            <b-nav-item to="/about">About</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-container>
-    </b-navbar>
+        <div class="d-flex flex-wrap justify-content-center mb-3">
+          <div class="text-center">
+            <a href="mailto:volkovnd@yandex.ru">volkovnd@yandex.ru</a>
+          </div>
+        </div>
 
-    <b-container>
-      <router-view></router-view>
-    </b-container>
-
-    <app-footer type="dark" variant="light">
-      <b-container>
-        <b>Footer</b>
-      </b-container>
-    </app-footer>
+        <div class="d-flex flex-wrap justify-content-center">
+          <ul class="list-inline">
+            <li v-for="link in links" :key="link.id" class="list-inline-item">
+              <a :href="link.href" target="_blank">{{ link.label }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import AppHeader from "@/components/layout/app-header.vue";
-import AppFooter from "@/components/layout/app-footer.vue";
-
 export default {
   name: "App",
-  components: {
-    AppHeader,
-    AppFooter,
+
+  data() {
+    return {
+      links: [
+        {
+          id: "vk",
+          label: "ВКонтакте",
+          href: "https://vk.com/volkovnd",
+        },
+        {
+          id: "twitter",
+          label: "Твиттер",
+          href: "https://twitter.com/volkovnd1990",
+        },
+      ],
+    };
   },
 };
 </script>
 
 <style lang="scss">
-@import "~@/assets/scss/vendors/bootstrap-vue/index";
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/placeholders";
 
-#app {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
-}
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
 </style>

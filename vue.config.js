@@ -1,4 +1,10 @@
-const bootstrapSassAbstractsImports = require("vue-cli-plugin-bootstrap-vue/sassAbstractsImports.js");
+const bootstrapSassAbstractsImports = [
+  '@import "~bootstrap/scss/_functions.scss"',
+  '@import "~@/assets/_custom.scss"',
+  '@import "~bootstrap/scss/_variables.scss"',
+  '@import "~bootstrap/scss/_mixins.scss"',
+  '@import "~bootstrap/scss/_utilities.scss"',
+];
 
 /** @type {import("@vue/cli-service").ProjectOptions} */
 module.exports = {
