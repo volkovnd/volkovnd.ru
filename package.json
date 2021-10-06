@@ -1,0 +1,65 @@
+{
+  "name": "@volkovnd/initial-vue",
+  "version": "0.1.0",
+  "private": true,
+  "description": "My initial template for Vue projects",
+  "author": {
+    "name": "Volkov Nikolay",
+    "email": "volkovnd@yandex.ru",
+    "url": "https://github.com/volkovnd/"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.3",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.21",
+    "popper.js": "^1.16.1",
+    "portal-vue": "^2.1.7",
+    "vue": "^2.6.14",
+    "vue-functional-data-merge": "^3.1.0",
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "sass": ">=1.26.5 <=1.32.13",
+    "sass-loader": "^10.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.5.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.21.0",
+    "vue-cli-plugin-bootstrap-vue": "~0.8.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "bugs": {
+    "url": "https://github.com/volkovnd/initial-template/issues"
+  },
+  "homepage": "https://github.com/volkovnd/initial-template#readme",
+  "keywords": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovnd/initial-template.git"
+  }
+}
