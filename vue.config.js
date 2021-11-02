@@ -1,10 +1,10 @@
 const bootstrapSassAbstractsImports = [
-  '@import "~bootstrap/scss/_functions.scss"',
-  '@import "~bootstrap/scss/_variables.scss"',
-  '@import "~@/scss/_custom.scss"',
-  '@import "~bootstrap/scss/_mixins.scss"',
-  '@import "~bootstrap/scss/_utilities.scss"',
-];
+  "~bootstrap/scss/_functions.scss",
+  "~bootstrap/scss/_variables.scss",
+  "~@/scss/_custom.scss",
+  "~bootstrap/scss/_mixins.scss",
+  "~bootstrap/scss/_utilities.scss",
+].map((p) => `@import "${p}";`);
 
 /** @type {import("@vue/cli-service").ProjectOptions} */
 module.exports = {
@@ -15,11 +15,8 @@ module.exports = {
     sourceMap: process.env.NODE_ENV !== "production",
 
     loaderOptions: {
-      sass: {
-        additionalData: bootstrapSassAbstractsImports.join("\n"),
-      },
       scss: {
-        additionalData: [...bootstrapSassAbstractsImports, ""].join(";\n"),
+        additionalData: bootstrapSassAbstractsImports.join("\n"),
       },
     },
   },
