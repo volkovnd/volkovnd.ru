@@ -33,10 +33,14 @@
     "source.fixAll.stylelint": true
   },
 
+  "eslint.enable": true,
   "eslint.format.enable": true,
   "eslint.validate": ["javascript", "javascriptreact", "vue"],
 
+  "prettier.enable": true,
+
   "stylelint.enable": true,
+  "stylelint.validate": ["css", "postcss", "scss", "vue", "vue-postcss"],
 
   "javascript.format.enable": false,
   "typescript.format.enable": false,
@@ -63,6 +67,9 @@
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[markdown]": {
     "editor.wordWrap": "on",

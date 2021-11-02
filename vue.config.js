@@ -1,7 +1,7 @@
 const bootstrapSassAbstractsImports = [
   '@import "~bootstrap/scss/_functions.scss"',
-  '@import "~@/assets/_custom.scss"',
   '@import "~bootstrap/scss/_variables.scss"',
+  '@import "~@/scss/_custom.scss"',
   '@import "~bootstrap/scss/_mixins.scss"',
   '@import "~bootstrap/scss/_utilities.scss"',
 ];
@@ -27,20 +27,14 @@ module.exports = {
   configureWebpack: (config) => {
     config.devtool = config.mode === "production" ? false : "source-map";
   },
+};
 
-  devServer: {
-    logLevel: "silent",
-    transportMode: "ws",
-    clientLogLevel: "none",
-    compress: true,
-    hot: true,
-    quiet: false,
-    before(app) {
-      app.use((req, res, next) => {
-        res.set("Access-Control-Allow-Origin", "*");
-
-        next();
-      });
-    },
-  },
+/** @type {import("webpack-dev-server").Configuration} */
+module.exports.devServer = {
+  logLevel: "silent",
+  transportMode: { client: "ws", server: "ws" },
+  clientLogLevel: "none",
+  compress: true,
+  hot: true,
+  quiet: false,
 };
