@@ -1,11 +1,15 @@
 import { WEB_FONT_CONFIG } from "@/config";
 
-const install = function () {
+const loadFonts = (config) => {
   import("webfontloader").then((WebFont) => {
-    return WebFont.load(WEB_FONT_CONFIG);
+    WebFont.load(config);
   });
 };
 
-export const WebFontPlugin = {
+const install = function (Vue, options) {
+  loadFonts(options);
+};
+
+export default {
   install,
 };

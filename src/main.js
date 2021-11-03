@@ -1,19 +1,17 @@
 import Vue from "vue";
 
-import router from "./router";
-
 import App from "./App.vue";
 
-import { WebFontPlugin } from "@/plugins/webfont";
+import WebFontPlugin from "@/plugins/webfont";
+
+import { WEB_FONT_CONFIG } from "@/config";
 
 Vue.config.productionTip = false;
 
-Vue.use(WebFontPlugin);
+Vue.use(WebFontPlugin, WEB_FONT_CONFIG);
 
 new Vue({
   el: "#app",
-
-  router,
 
   render: (h) => h(App),
 });
