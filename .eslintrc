@@ -4,9 +4,9 @@
     "node": true
   },
   "parserOptions": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   },
-  "extends": ["plugin:vue/recommended", "eslint:recommended", "@vue/prettier"],
+  "extends": ["plugin:vue/recommended", "eslint:recommended", "plugin:prettier/recommended"],
   "rules": {
     "no-console": "warn",
     "no-debugger": "warn"
