@@ -1,3 +1,5 @@
+const express = require("express");
+
 const bootstrapSassAbstractsImports = [
   "~bootstrap/scss/_functions.scss",
   "~bootstrap/scss/_variables.scss",
@@ -12,7 +14,7 @@ module.exports = {
   productionSourceMap: false,
 
   css: {
-    sourceMap: process.env.NODE_ENV !== "production",
+    sourceMap: process.env.NODE_ENV === "development",
 
     loaderOptions: {
       scss: {
@@ -22,16 +24,15 @@ module.exports = {
   },
 
   configureWebpack: (config) => {
-    config.devtool = config.mode === "production" ? false : "source-map";
+    config.devtool = config.mode === "development" ? "source-map" : false;
   },
 };
 
 /** @type {import("webpack-dev-server").Configuration} */
 module.exports.devServer = {
-  logLevel: "silent",
   transportMode: { client: "ws", server: "ws" },
-  clientLogLevel: "none",
-  compress: true,
-  hot: true,
-  quiet: false,
+  noInfo: true,
+  before: (app) => {
+    app.use(express.json());
+  },
 };
