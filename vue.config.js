@@ -21,6 +21,19 @@ module.exports = {
     },
   },
 
+  chainWebpack: (config) => {
+    config.module
+      .rule("vue")
+      .use("vue-loader")
+      .tap((options) => ({
+        transformAssetUrls: {
+          "v-img": "src",
+          ...(options.transformAssetUrls ? options.transformAssetUrls : {}),
+        },
+        ...options,
+      }));
+  },
+
   configureWebpack: (config) => {
     config.devtool = process.env.NODE_ENV === "development" ? "source-map" : false;
   },

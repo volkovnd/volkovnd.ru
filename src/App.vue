@@ -12,11 +12,4 @@ export default {
 
 <style lang="scss">
 @import "~@/scss/index";
-
-#app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-}
 </style>

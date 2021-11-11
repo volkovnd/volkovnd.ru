@@ -1,29 +1,72 @@
 <template>
-  <div class="container">
-    <grid-row class="align-items-center mb-4 pb-4 border-bottom">
-      <div slot="left">
-        <h1>Николай Волков</h1>
-      </div>
-      <div slot="right">
-        <img src="~@/assets/avatar-small.jpg" class="rounded-circle" alt="" style="width: 150px" />
-      </div>
-    </grid-row>
+  <div id="page">
+    <v-container>
+      <div class="row justify-content-around align-items-md-stretch">
+        <div class="col-12 col-md">
+          <v-img fluid src="~@/assets/avatar.jpg" />
+        </div>
+        <div class="col-12 col-md">
+          <div class="py-3">
+            <h1 class="mb-4">Николай Волков</h1>
 
-    <contacts-item title="E-Mail" link="mailto:volkovnd@yandex.ru" link-text="volkovnd@yandex.ru" />
-    <contacts-item title="Telegram" link="https://t.me/volkovnd" />
-    <contacts-item title="GitHub" link="https://github.com/volkovnd" />
+            <div class="mb-3 pt-3 pb-3 border-top border-bottom">
+              <div>Россия, Санкт-Петербург</div>
+            </div>
+
+            <div class="mb-3 pb-3 border-bottom">
+              <v-grid v-for="contact in computedContacts" :key="contact.label" columns="4" gap="0.5rem 1rem">
+                <v-grid-col col="1">
+                  <b>{{ contact.label }}:</b>
+                </v-grid-col>
+                <v-grid-col col="3">
+                  <a :href="contact.linkHref">{{ contact.linkText }}</a>
+                </v-grid-col>
+              </v-grid>
+            </div>
+
+            <div class="mb-3 pb-3 border-bottom">
+              <v-grid gap="0.5rem">
+                <v-btn v-for="skill in skills" :key="skill" variant="primary">{{ skill }}</v-btn>
+              </v-grid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </v-container>
   </div>
 </template>
 
 <script>
-import GridRow from "@/components/grid-row.vue";
-import ContactsItem from "@/components/contacts-item.vue";
-
 export default {
   name: "HomeView",
-  components: {
-    GridRow,
-    ContactsItem,
+  data() {
+    return {
+      contacts: [
+        {
+          label: "E-Mail",
+          linkText: "volkovnd@yandex.ru",
+          linkHref: "mailto:volkovnd@yandex.ru",
+        },
+        {
+          label: "GitHub",
+          linkText: "https://github.com/volkovnd",
+        },
+        {
+          label: "Telegram",
+          linkText: "https://t.me/volkovnd",
+        },
+      ],
+      skills: ["CSS", "HTML", "JavaScript"],
+    };
+  },
+  computed: {
+    computedContacts() {
+      return this.contacts.map((contact) => ({
+        linkHref: contact.linkText,
+
+        ...contact,
+      }));
+    },
   },
 };
 </script>
