@@ -1,5 +1,6 @@
 /** @type {import("@vue/cli-service").ProjectOptions} */
 module.exports = {
+  publicPath: process.env.VUE_APP_BASE_URL || "/",
   lintOnSave: false,
   productionSourceMap: false,
   transpileDependencies: true,
