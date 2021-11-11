@@ -11,5 +11,23 @@
   "htmlWhitespaceSensitivity": "css",
   "bracketSpacing": true,
   "bracketSameLine": false,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "printWidth": 70,
+        "useTabs": false,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "proseWrap": "never"
+      }
+    },
+    {
+      "files": "*.{json,babelrc,eslintrc,remarkrc,prettierrc,stylelintrc}",
+      "options": {
+        "useTabs": false
+      }
+    }
+  ]
 }
