@@ -3,5 +3,6 @@ import GlobalComponentsPlugin from "./global-components";
 
 export default {
   WebFontsPlugin,
+
   GlobalComponentsPlugin,
 };

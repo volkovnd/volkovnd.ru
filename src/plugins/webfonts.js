@@ -1,12 +1,10 @@
 import config from "@/config";
-import { pluginFactory } from "@/utils/plugins";
-
 import WebFont from "webfontloader";
 
-const webFontsConfig = config.webFonts || null;
+import { pluginFactory } from "@/utils/plugins";
 
 const loadWebFonts = () => {
-  if (webFontsConfig) WebFont.load(webFontsConfig);
+  if (config.webFonts) WebFont.load(config.webFonts);
 };
 
 export default pluginFactory(loadWebFonts);

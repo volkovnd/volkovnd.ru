@@ -27,8 +27,8 @@ export default {
     },
   },
   render: (h, { data, props, children }) => {
-    const computedGridColClass = props.col ? [`g-col-${toNumber(props.col)}`] : null;
-    const computedGridStartClass = props.start ? [`g-start-${toNumber(props.start)}`] : null;
+    const computedGridColClass = props.col ? [`g-col-${props.col}`] : null;
+    const computedGridStartClass = props.start ? [`g-start-${props.start}`] : null;
     const computedColumnStyle = props.column ? { gridColumn: toNumber(props.column) } : null;
     const computedRowStyle = props.row ? { gridRow: toNumber(props.row) } : null;
 

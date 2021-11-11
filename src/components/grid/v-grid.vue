@@ -1,6 +1,5 @@
 <script>
 import { mergeData } from "vue-functional-data-merge";
-import { toNumber } from "@/utils/number";
 
 export default {
   functional: true,
@@ -23,15 +22,17 @@ export default {
     },
   },
   render: (h, { data, props, children }) => {
-    const computedStyleRows = props.rows ? { "--bs-rows": toNumber(props.rows) } : null;
-    const computedStyleColumns = props.columns ? { "--bs-columns": toNumber(props.columns) } : null;
-    const computedStyleGap = props.gap ? { "--bs-gap": props.gap } : null;
-
     return h(
       props.tagName,
       mergeData(data, {
         staticClass: "grid",
-        style: [computedStyleRows, computedStyleColumns, computedStyleGap],
+        style: ["rows", "columns", "gap"].map((key) =>
+          props[key]
+            ? {
+                [`--bs-${key}`]: props[key],
+              }
+            : null
+        ),
       }),
       children
     );

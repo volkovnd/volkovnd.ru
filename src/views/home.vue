@@ -1,37 +1,38 @@
 <template>
-  <div id="page">
+  <div class="">
     <v-container>
-      <div class="row justify-content-around align-items-md-stretch">
-        <div class="col-12 col-md">
-          <v-img fluid src="~@/assets/avatar.jpg" />
-        </div>
-        <div class="col-12 col-md">
-          <div class="py-3">
-            <h1 class="mb-4">Николай Волков</h1>
+      <v-row row-cols="1" row-cols-md="2">
+        <v-col>
+          <v-img src="~@/assets/avatar.jpg" fluid />
+        </v-col>
 
-            <div class="mb-3 pt-3 pb-3 border-top border-bottom">
+        <v-col>
+          <div class="d-grid gap-4">
+            <div class="py-2 border-top border-bottom">
+              <h1>Николай Волков</h1>
+
               <div>Россия, Санкт-Петербург</div>
             </div>
 
-            <div class="mb-3 pb-3 border-bottom">
-              <v-grid v-for="contact in computedContacts" :key="contact.label" columns="4" gap="0.5rem 1rem">
-                <v-grid-col col="1">
+            <div>
+              <v-row v-for="contact in computedContacts" :key="contact.label">
+                <v-col col="3">
                   <b>{{ contact.label }}:</b>
-                </v-grid-col>
-                <v-grid-col col="3">
+                </v-col>
+                <v-col col="9">
                   <a :href="contact.linkHref">{{ contact.linkText }}</a>
-                </v-grid-col>
-              </v-grid>
+                </v-col>
+              </v-row>
             </div>
 
-            <div class="mb-3 pb-3 border-bottom">
-              <v-grid gap="0.5rem">
-                <v-btn v-for="skill in skills" :key="skill" variant="primary">{{ skill }}</v-btn>
+            <div class="py-2 border-top border-bottom">
+              <v-grid gap="0.25rem">
+                <v-btn v-for="skill in skills" :key="skill" variant="primary" size="sm">{{ skill }}</v-btn>
               </v-grid>
             </div>
           </div>
-        </div>
-      </div>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>

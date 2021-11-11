@@ -18,8 +18,8 @@ export default {
     },
   },
   render: (h, { data, props, children }) => {
-    const computedVariantClass = props.variant ? [`btn-${props.variant}`] : null;
-    const computedSizeClass = props.size ? [`btn-${props.size}`] : null;
+    const computedVariantClass = props.variant ? { [`btn-${props.variant}`]: true } : null;
+    const computedSizeClass = props.size ? { [`btn-${props.size}`]: true } : null;
 
     return h(
       "button",

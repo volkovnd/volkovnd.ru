@@ -4,15 +4,13 @@ import router from "@/router";
 
 import App from "./App.vue";
 
-import config from "@/config";
-
 import plugins from "@/plugins";
 
 import { registerPlugins } from "@/utils/plugins";
 
 Vue.config.productionTip = false;
 
-registerPlugins(Vue, plugins, config);
+registerPlugins(Vue, plugins);
 
 new Vue({
   el: "#app",
