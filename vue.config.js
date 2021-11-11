@@ -32,9 +32,8 @@ module.exports.devServer = {
   port: process.env.PORT || 8080,
   open: true,
   compress: true,
-  noInfo: true,
-  transportMode: "ws",
-  before: (app) => {
-    require("./devServer")(app);
+
+  onBeforeSetupMiddleware: (devServer) => {
+    require("./devServer")(devServer);
   },
 };
