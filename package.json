@@ -13,7 +13,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "clean": "rimraf dist",
-    "predeploy": "cross-env VUE_APP_BASE_URL=https://volkovnd.github.io/volkovnd.dev/ vue-cli-service build",
+    "predeploy": "npm run build",
     "deploy": "vue-cli-service gh-pages"
   },
   "dependencies": {
