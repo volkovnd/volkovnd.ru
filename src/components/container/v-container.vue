@@ -19,7 +19,6 @@ export default {
     return h(
       props.tagName,
       mergeData(data, {
-        staticClass: "container",
         class: [computedContainerClass],
       }),
       children
