@@ -1,10 +1,5 @@
-import config from "@/config";
 import WebFont from "webfontloader";
 
-import { pluginFactory } from "@/utils/plugins";
+import { WEB_FONT_CONFIG } from "@/config";
 
-const loadWebFonts = () => {
-  if (config.webFonts) WebFont.load(config.webFonts);
-};
-
-export default pluginFactory(loadWebFonts);
+WebFont.load(WEB_FONT_CONFIG);

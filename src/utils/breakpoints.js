@@ -1,9 +1,9 @@
-import config from "@/config";
+import { BREAKPOINTS } from "@/config";
 import { camelCase, kebabCase } from "./string";
 
-export const availableBreakpoints = Object.keys(config.breakpoints);
+export const availableBreakpoints = Object.keys(BREAKPOINTS);
 
-export const defaultBreakpoint = availableBreakpoints.find((breakpoint) => !config.breakpoints[breakpoint]);
+export const defaultBreakpoint = availableBreakpoints.find((breakpoint) => !BREAKPOINTS[breakpoint]);
 
 export const breakpointPrefix = (breakpoint, prefix = "") =>
   `${prefix}${prefix !== "" && breakpoint === defaultBreakpoint ? "" : "-" + breakpoint}`;

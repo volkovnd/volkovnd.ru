@@ -22,7 +22,6 @@ $yellow: #ffc107;
 $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
-
 $primary: $blue;
 $secondary: $gray-600;
 $success: $green;
@@ -31,7 +30,6 @@ $warning: $yellow;
 $danger: $red;
 $light: $gray-100;
 $dark: $gray-900;
-
 $enable-caret: true;
 $enable-rounded: true;
 $enable-shadows: false;
@@ -47,17 +45,14 @@ $enable-validation-icons: true;
 $enable-negative-margins: false;
 $enable-deprecation-messages: true;
 $enable-important-utilities: true;
-
 $body-bg: $white;
 $body-color: $gray-900;
 $body-text-align: null;
-
 $link-color: $primary;
 $link-decoration: underline;
 $link-shade-percentage: 20%;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
 $link-hover-decoration: null;
-
 $stretched-link-pseudo-element: after;
 $stretched-link-z-index: 1;
 
@@ -93,5 +88,5 @@ $paragraph-margin-bottom: 1rem;
 
 // $container-padding-x: $grid-gutter-width * 0.5;
 
-$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans",
   "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

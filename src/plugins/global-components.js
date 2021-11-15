@@ -1,23 +1,10 @@
-import { pluginFactory } from "@/utils/plugins";
-import { registerComponents } from "@/utils/components";
+import Vue from "vue";
 
 const context = require.context("@/components", true, /\.(vue|js)$/);
 
-const components = context
-  .keys()
-  .map((key) => ({
-    key,
-    name: key.replace(/^\..*\//, "").replace(/\.(vue|js)$/, ""),
-  }))
-  .reduce(
-    (components, { key, name }) => ({
-      [name]: context(key).default,
+context.keys().forEach((key) => {
+  const name = key.replace(/^\..*\//, "").replace(/\.(vue|js)$/, "");
+  const options = context(key).default;
 
-      ...components,
-    }),
-    {}
-  );
-
-export default pluginFactory((VueConstructor) => {
-  registerComponents(VueConstructor, components);
+  Vue.component(name, options);
 });

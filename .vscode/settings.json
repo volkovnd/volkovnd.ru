@@ -11,14 +11,6 @@
     "**/dist": true
   },
 
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
-    "**/.hg/store/**": true,
-    "**/dist/**": true
-  },
-
   "files.encoding": "utf8",
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
@@ -40,7 +32,7 @@
   "prettier.enable": true,
 
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "postcss", "scss", "vue", "vue-postcss"],
+  "stylelint.validate": ["css", "postcss", "scss", "vue"],
 
   "javascript.format.enable": false,
   "typescript.format.enable": false,
@@ -60,9 +52,10 @@
   "vetur.validation.template": false,
   "vetur.validation.templateProps": false,
 
-  "scss.scannerExclude": ["**/.git", "**/node_modules", "**/bower_components", "**/dist"],
-
   "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[vue]": {

@@ -1,16 +1,15 @@
 import Vue from "vue";
 
+import "@/scss/index.scss";
+
+import "@/plugins/webfonts";
+import "@/plugins/global-components";
+
 import router from "@/router";
 
 import App from "./App.vue";
 
-import plugins from "@/plugins";
-
-import { registerPlugins } from "@/utils/plugins";
-
 Vue.config.productionTip = false;
-
-registerPlugins(Vue, plugins);
 
 new Vue({
   el: "#app",
