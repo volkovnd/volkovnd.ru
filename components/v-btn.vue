@@ -2,7 +2,8 @@
   <button
     :type="type"
     class="btn"
-    :class="`btn-${variant} btn-${size}`">
+    :class="`btn-${variant} btn-${size}`"
+  >
     <slot />
   </button>
 </template>

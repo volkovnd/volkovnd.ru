@@ -5,9 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const config = useRuntimeConfig();
-
 useHead({
-  titleTemplate: config.public.title
+  titleTemplate: (title) => (title ? `${title} | ` : "") + "Личный сайт Волкова Николая Дмитриевича"
 });
 </script>

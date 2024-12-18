@@ -6,7 +6,8 @@
       '--bs-columns': columns,
       '--bs-rows': rows,
       '--bs-gap': gap
-    }">
+    }"
+  >
     <slot />
   </component>
 </template>

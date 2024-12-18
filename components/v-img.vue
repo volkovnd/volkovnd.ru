@@ -2,7 +2,8 @@
   <component
     :is="tagName"
     :alt="alt"
-    :class="{ 'img-fluid': fluid, 'img-thumbnail': thumbnail }" />
+    :class="{ 'img-fluid': fluid, 'img-thumbnail': thumbnail }"
+  />
 </template>
 
 <script setup lang="ts">
