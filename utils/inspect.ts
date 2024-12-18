@@ -1,5 +1,3 @@
-import { isString, isInteger, isNumber } from "lodash-es";
-
 export function isUndefined(value: unknown): value is undefined {
   return value === undefined;
 }
@@ -19,5 +17,3 @@ export function isBoolean(value: unknown): value is boolean {
 export function isArray(value: unknown): value is unknown[] {
   return Array.isArray(value);
 }
-
-export { isString, isInteger, isNumber };
