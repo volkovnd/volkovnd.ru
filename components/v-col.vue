@@ -2,14 +2,15 @@
   <component
     :is="tagName"
     :class="{
-      'col': !col,
+      col: !col,
       [`col-${col}`]: col,
       [`col-sm-${colSm}`]: colSm,
       [`col-md-${colMd}`]: colMd,
       [`col-lg-${colLg}`]: colLg,
       [`col-xl-${colXl}`]: colXl,
       [`col-xxl-${colXxl}`]: colXxl
-    }">
+    }"
+  >
     <slot />
   </component>
 </template>

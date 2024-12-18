@@ -2,7 +2,7 @@
   <component
     :is="tagName"
     :class="{
-      'container': !fluid,
+      container: !fluid,
       'container-fluid': fluid
     }"
   >

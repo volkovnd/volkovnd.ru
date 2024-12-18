@@ -16,7 +16,8 @@
       [`gy-${gapY}`]: gapY,
       [`justify-content-${justifyContent}`]: justifyContent,
       [`align-items-${alignItems}`]: alignItems
-    }">
+    }"
+  >
     <slot />
   </component>
 </template>

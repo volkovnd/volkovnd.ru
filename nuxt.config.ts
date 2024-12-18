@@ -49,22 +49,9 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: [
-    "@nuxtjs/google-fonts",
-    "@nuxt/eslint",
-    "@nuxtjs/stylelint-module"
-    // "@vueuse/nuxt",
-    // "@nuxt/test-utils",
-    // "@nuxtjs/color-mode",
-  ],
+  modules: ["@nuxtjs/google-fonts", "@nuxt/eslint", "@nuxtjs/stylelint-module"],
 
   spaLoadingTemplate: false,
-
-  postcss: {
-    plugins: {
-      "postcss-preset-env": {}
-    }
-  },
 
   runtimeConfig: {
     public: {
@@ -124,7 +111,7 @@ export default defineNuxtConfig({
       extends: [
         "stylelint-config-standard",
         "stylelint-config-standard-scss",
-        "stylelint-config-recommended-vue",
+        "stylelint-config-recommended-vue/scss",
         "stylelint-config-recess-order"
       ]
     }
