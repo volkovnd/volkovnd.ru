@@ -42,13 +42,19 @@ withDefaults(
   }>(),
   {
     tagName: "div",
-    justifyContent: null,
-    alignItems: null,
+    justifyContent: undefined,
+    alignItems: undefined,
     noGutters: false,
     column: false,
-    gap: null,
-    gapX: null,
-    gapY: null
+    gap: undefined,
+    gapX: undefined,
+    gapY: undefined,
+    rowCols: undefined,
+    rowColsSm: undefined,
+    rowColsMd: undefined,
+    rowColsLg: undefined,
+    rowColsXl: undefined,
+    rowColsXxl: undefined
   }
 );
 </script>

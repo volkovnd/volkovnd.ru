@@ -22,9 +22,9 @@ withDefaults(
   }>(),
   {
     tagName: "div",
-    columns: null,
-    rows: null,
-    gap: null
+    columns: undefined,
+    rows: undefined,
+    gap: undefined
   }
 );
 </script>

@@ -29,13 +29,13 @@ withDefaults(
   }>(),
   {
     tagName: "div",
-    col: null,
-    colXs: null,
-    colSm: null,
-    colMd: null,
-    colLg: null,
-    colXl: null,
-    colXxl: null
+    col: false,
+    colXs: false,
+    colSm: false,
+    colMd: false,
+    colLg: false,
+    colXl: false,
+    colXxl: false
   }
 );
 </script>
