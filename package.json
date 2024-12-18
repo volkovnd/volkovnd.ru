@@ -1,7 +1,11 @@
 {
   "name": "@volkovnd/volkovnd.dev",
   "version": "0.1.0",
+  "keywords": [],
+  "license": "MIT",
   "private": true,
+  "type": "module",
+  "homepage": "https://volkovnd.ru",
   "description": "Volkov Nikolay site",
   "author": {
     "name": "Volkov Nikolay",
@@ -52,15 +56,5 @@
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.2",
     "vite-plugin-eslint2": "^5.0.2"
-  },
-  "bugs": {
-    "url": "https://github.com/volkovnd/initial-template/issues"
-  },
-  "homepage": "https://volkovnd.dev",
-  "keywords": [],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovnd/initial-template.git"
   }
 }

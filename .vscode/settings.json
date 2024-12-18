@@ -52,5 +52,8 @@
       "other": "off"
     },
     "files.trimTrailingWhitespace": false
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/HONOR/Projects/volkovnd.dev/.github/workflows/deploy.yml"
   }
 }
