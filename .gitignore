@@ -125,3 +125,7 @@ dist
 
 # Local History for Visual Studio Code
 .history/
+.nuxt
+.output
+.eslintcache
+.stylelintcache

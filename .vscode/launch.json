@@ -1,25 +1,29 @@
 {
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
   "version": "0.2.0",
-  "compounds": [],
   "configurations": [
     {
       "type": "chrome",
       "request": "launch",
-      "name": "vuejs: chrome",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}/src",
-      "breakOnLoad": true,
-      "preLaunchTask": "npm:serve",
-      "sourceMaps": true,
-      "sourceMapPathOverrides": {
-        "webpack:/*": "${webRoot}/*",
-        "/./*": "${webRoot}/*",
-        "/src/*": "${webRoot}/*",
-        "/*": "*",
-        "/./~/*": "${workspaceFolder}/node_modules/*"
-      },
-      "userDataDir": "${workspaceFolder}}/.vscode/chrome",
-      "disableNetworkCache": true
+      "name": "client: chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "${env:LOCALAPPDATA}\\Yandex\\YandexBrowser\\Application\\browser.exe"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "server: nuxt",
+      "outputCapture": "std",
+      "program": "${workspaceFolder}/node_modules/nuxi/bin/nuxi.mjs",
+      "args": ["dev"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "fullstack: nuxt",
+      "configurations": ["server: nuxt", "client: chrome"]
     }
   ]
 }
