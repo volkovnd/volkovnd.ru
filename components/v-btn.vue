@@ -2,7 +2,10 @@
   <button
     :type="type"
     class="btn"
-    :class="`btn-${variant} btn-${size}`"
+    :class="{
+      [`btn-${variant}`]: !!variant,
+      [`btn-${size}`]: !!size
+    }"
   >
     <slot />
   </button>
@@ -12,13 +15,13 @@
 withDefaults(
   defineProps<{
     type?: HTMLButtonElement["type"];
-    variant?: string | null;
-    size?: string | null;
+    variant?: string;
+    size?: string;
   }>(),
   {
     type: "button",
-    variant: null,
-    size: null
+    variant: undefined,
+    size: undefined
   }
 );
 </script>

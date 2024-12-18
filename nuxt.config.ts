@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          silenceDeprecations: ["color-functions", "import", "global-builtin", "legacy-js-api"],
           additionalData: [
             "bootstrap/scss/functions",
             "~/assets/scss/variables",
