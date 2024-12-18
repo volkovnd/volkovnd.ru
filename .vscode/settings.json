@@ -8,7 +8,11 @@
     "**/Thumbs.db": true,
     "**/node_modules": true,
     "**/package-lock.json": true,
-    "**/dist": true
+    "**/dist": true,
+    ".eslintcache": true,
+    ".stylelintcache": true,
+    ".nuxt": true,
+    ".output": true
   },
 
   "files.encoding": "utf8",
@@ -22,51 +26,34 @@
   "editor.formatOnSave": true,
 
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
 
   "eslint.enable": true,
   "eslint.format.enable": true,
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],
 
   "prettier.enable": true,
+
+  "css.styleSheets": ["node_modules/bootstrap/dist/css/bootstrap.css"],
 
   "stylelint.enable": true,
   "stylelint.validate": ["css", "postcss", "scss", "vue"],
 
-  "javascript.format.enable": false,
-  "typescript.format.enable": false,
-
-  "json.format.enable": false,
-  "html.format.enable": false,
-
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "postcss.validate": false,
-
-  "vetur.format.enable": false,
-  "vetur.validation.interpolation": false,
-  "vetur.validation.script": false,
-  "vetur.validation.style": false,
-  "vetur.validation.template": false,
-  "vetur.validation.templateProps": false,
-
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[markdown]": {
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "files.trimTrailingWhitespace": false
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/HONOR/Projects/volkovnd.dev/.github/workflows/deploy.yml"
   }
 }

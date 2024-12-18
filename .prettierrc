@@ -1,5 +1,5 @@
 {
-  "trailingComma": "es5",
+  "trailingComma": "none",
   "useTabs": false,
   "endOfLine": "lf",
   "printWidth": 120,
@@ -8,26 +8,9 @@
   "semi": true,
   "vueIndentScriptAndStyle": false,
   "quoteProps": "preserve",
-  "htmlWhitespaceSensitivity": "css",
+  "htmlWhitespaceSensitivity": "ignore",
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "always",
-  "overrides": [
-    {
-      "files": "*.md",
-      "options": {
-        "printWidth": 70,
-        "useTabs": false,
-        "trailingComma": "none",
-        "arrowParens": "avoid",
-        "proseWrap": "never"
-      }
-    },
-    {
-      "files": "*.{json,babelrc,eslintrc,remarkrc,prettierrc,stylelintrc}",
-      "options": {
-        "useTabs": false
-      }
-    }
-  ]
+  "singleAttributePerLine": true
 }
