@@ -8,11 +8,11 @@
     </div>
 
     <div class="info">
-      <h1 class="name mb-2">Николай Волков</h1>
+      <h1 class="name py-2">Николай Волков</h1>
 
-      <div class="location mb-2">Россия, Санкт-Петербург</div>
+      <div class="location py-2 border-top border-bottom">Россия, Санкт-Петербург</div>
 
-      <div class="contacts py-2 border-bottom border-top">
+      <div class="contacts py-2 border-bottom">
         <div
           v-for="contact in сontacts"
           :key="contact.label"
@@ -63,7 +63,7 @@ const сontacts = ref([
   }
 ]);
 
-const skills = ref(["CSS", "HTML", "JavaScript"]);
+const skills = ref(["HTML", "CSS", "TypeScript", "Vue", "Nuxt"]);
 </script>
 
 <style lang="scss">
@@ -84,9 +84,12 @@ body {
 
 h1 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 2rem;
   font-weight: 500;
+}
+b {
+  font-weight: 700;
 }
 
 a {
@@ -113,8 +116,6 @@ a {
   flex: 0 0 33%;
   width: 100%;
   max-width: 33%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .logo {
@@ -130,24 +131,35 @@ a {
 
 .contact {
   display: flex;
+  align-items: center;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
   font-size: 14px;
 
   &-label {
-    flex: 0 0 33%;
+    flex: 0 0 100px;
     width: 100%;
-    max-width: 33%;
+    max-width: 100px;
   }
 
   &-link {
-    flex: 0 0 67%;
+    flex: 1 0;
     width: 100%;
-    max-width: 67%;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-2 {
