@@ -8,9 +8,10 @@
   "semi": true,
   "vueIndentScriptAndStyle": false,
   "quoteProps": "as-needed",
-  "htmlWhitespaceSensitivity": "ignore",
+  "htmlWhitespaceSensitivity": "strict",
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "always",
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "embeddedLanguageFormatting": "auto"
 }
