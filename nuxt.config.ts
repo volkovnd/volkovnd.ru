@@ -5,12 +5,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true, telemetry: false },
   telemetry: false,
 
-  vue: {
-    transformAssetUrls: {
-      "v-img": ["src"]
-    }
-  },
-
   app: {
     baseURL: import.meta.env.NUXT_APP_BASE_URL || "/",
     head: {
@@ -51,7 +45,5 @@ export default defineNuxtConfig({
 
   eslint: {
     checker: true
-  },
-
-  compatibilityDate: "2025-02-17"
+  }
 });
