@@ -4,32 +4,10 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
   devtools: { enabled: true, telemetry: false },
   telemetry: false,
-  css: ["~/assets/scss/index.scss"],
 
   vue: {
     transformAssetUrls: {
       "v-img": ["src"]
-    }
-  },
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          silenceDeprecations: ["color-functions", "import", "global-builtin", "legacy-js-api"],
-          additionalData: [
-            "bootstrap/scss/functions",
-            "~/assets/scss/variables",
-            "bootstrap/scss/variables",
-            "bootstrap/scss/variables-dark",
-            "bootstrap/scss/maps",
-            "bootstrap/scss/mixins",
-            "bootstrap/scss/utilities"
-          ]
-            .map((p) => `@import "${p}";`)
-            .join("\n")
-        }
-      }
     }
   },
 
