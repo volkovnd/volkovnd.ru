@@ -21,14 +21,14 @@
 
           <div>
             <v-row
-              v-for="contact in computedContacts"
+              v-for="contact in сontacts"
               :key="contact.label"
             >
               <v-col col="3">
                 <b>{{ contact.label }}:</b>
               </v-col>
               <v-col col="9">
-                <a :href="contact.linkHref">{{ contact.linkText }}</a>
+                <a :href="contact.linkHref">{{ contact.linkText || contact.linkHref }}</a>
               </v-col>
             </v-row>
           </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-const contacts = ref([
+const сontacts = ref([
   {
     label: "E-Mail",
     linkText: "volkovnd@yandex.ru",
@@ -60,21 +60,13 @@ const contacts = ref([
   },
   {
     label: "GitHub",
-    linkText: "https://github.com/volkovnd"
+    linkHref: "https://github.com/volkovnd"
   },
   {
     label: "Telegram",
-    linkText: "https://t.me/volkovnd"
+    linkHref: "https://t.me/volkovnd"
   }
 ]);
 
 const skills = ref(["CSS", "HTML", "JavaScript"]);
-
-const computedContacts = computed(() => {
-  return contacts.value.map((contact) => ({
-    linkHref: contact.linkText,
-
-    ...contact
-  }));
-});
 </script>
