@@ -14,8 +14,8 @@
   cursor: pointer;
   background-color: $primary;
   border: none;
-  border-radius: 0.25rem;
-  transition: all 0.25s ease-in-out;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: $active;

@@ -1,5 +1,8 @@
 <template>
-  <div id="home">
+  <div
+    id="home"
+    class="flex"
+  >
     <div class="logo">
       <img
         src="~@/assets/images/avatar.jpg"
@@ -36,8 +39,6 @@
         <v-tag
           v-for="skill in skills"
           :key="skill"
-          variant="primary"
-          size="sm"
         >
           {{ skill }}
         </v-tag>
@@ -68,8 +69,6 @@ const skills = ref(["HTML", "CSS", "TypeScript", "Vue", "Nuxt"]);
 
 <style lang="scss">
 #home {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 1032px;
   margin-right: auto;
