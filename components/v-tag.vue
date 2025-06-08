@@ -1,28 +1,17 @@
 <template>
-  <button
-    :type="type"
-    class="btn"
-  >
+  <span class="tag">
     <slot />
-  </button>
+  </span>
 </template>
-
-<script lang="ts" setup>
-withDefaults(
-  defineProps<{
-    type?: HTMLButtonElement["type"];
-  }>(),
-  {
-    type: "button"
-  }
-);
-</script>
 
 <style lang="scss">
 @use "sass:color";
 
-.btn {
+.tag {
+  display: inline-block;
   padding: 0.5rem 1rem;
+  font-size: 15px;
+  font-weight: 500;
   color: #fff;
   cursor: pointer;
   background-color: $primary;

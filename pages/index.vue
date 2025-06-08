@@ -33,14 +33,14 @@
       </div>
 
       <div class="skills py-1 mb-2 border-bottom">
-        <v-btn
+        <v-tag
           v-for="skill in skills"
           :key="skill"
           variant="primary"
           size="sm"
         >
           {{ skill }}
-        </v-btn>
+        </v-tag>
       </div>
     </div>
   </div>
@@ -103,11 +103,9 @@ a {
 
 #home {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1032px;
-  padding-right: 1rem;
-  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -116,12 +114,26 @@ a {
   flex: 0 0 33%;
   width: 100%;
   max-width: 33%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .logo {
   flex: 0 0 67%;
   width: 100%;
   max-width: 67%;
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
 
   img {
     display: block;
@@ -132,8 +144,8 @@ a {
 .contact {
   display: flex;
   align-items: center;
-  margin-top: 0.375rem;
-  margin-bottom: 0.375rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   font-size: 14px;
 
   &-label {
@@ -155,25 +167,25 @@ a {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: $spacing;
 }
 
 .mb-1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing;
 }
 
 .mb-2 {
-  margin-bottom: 1rem;
+  margin-bottom: $spacing * 2;
 }
 
 .py-1 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: $spacing;
+  padding-bottom: $spacing;
 }
 
 .py-2 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: $spacing * 2;
+  padding-bottom: $spacing * 2;
 }
 
 .border-top {
