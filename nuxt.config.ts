@@ -29,6 +29,16 @@ export default defineNuxtConfig({
     }
   },
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "assets/scss/variables" as *;'
+        }
+      }
+    }
+  },
+
   googleFonts: {
     families: {
       "Open Sans": {

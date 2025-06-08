@@ -89,6 +89,15 @@ h1 {
   font-weight: 500;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:visited {
+    color: $primary;
+  }
+}
+
 #home {
   display: flex;
   gap: 1rem;

@@ -18,19 +18,20 @@ withDefaults(
 );
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@use "sass:color";
+
 .btn {
-  display: inline-block;
   padding: 0.5rem 1rem;
   color: #fff;
   cursor: pointer;
-  background-color: #15459e;
-  border: 1px solid #15459e;
-  border-radius: 0.25rem;
+  background-color: $primary;
+  border: none;
+  border-radius: 0.375rem;
   transition: all 0.15s ease-in-out;
 
   &:hover {
-    background-color: #133575;
+    background-color: color.adjust($primary, $lightness: -10%);
   }
 }
 </style>
