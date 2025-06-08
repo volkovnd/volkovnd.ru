@@ -1,2 +1,5 @@
+@use "sass:color";
+
 $primary: #15459e;
+$active: color.adjust($primary, $lightness: -15%);
 $spacing: 0.5rem;

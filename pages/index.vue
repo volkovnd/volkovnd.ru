@@ -10,13 +10,13 @@
     <div class="info">
       <h1 class="name py-2">Николай Волков</h1>
 
-      <div class="location py-2 border-top border-bottom">Россия, Санкт-Петербург</div>
+      <div class="location py-1 border-top border-bottom font-small">Россия, Санкт-Петербург</div>
 
-      <div class="contacts py-2 border-bottom">
+      <div class="contacts py-1 border-bottom">
         <div
           v-for="contact in сontacts"
           :key="contact.label"
-          class="contact"
+          class="contact font-small flex"
         >
           <div class="contact-label">
             <b>{{ contact.label }}:</b>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="skills py-1 mb-2 border-bottom">
+      <div class="skills gap-1 flex py-1 mb-2 border-bottom">
         <v-tag
           v-for="skill in skills"
           :key="skill"
@@ -67,40 +67,6 @@ const skills = ref(["HTML", "CSS", "TypeScript", "Vue", "Nuxt"]);
 </script>
 
 <style lang="scss">
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-}
-
-h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: 500;
-}
-b {
-  font-weight: 700;
-}
-
-a {
-  color: $primary;
-  text-decoration: none;
-
-  &:visited {
-    color: $primary;
-  }
-}
-
 #home {
   display: flex;
   flex-wrap: wrap;
@@ -142,11 +108,9 @@ a {
 }
 
 .contact {
-  display: flex;
   align-items: center;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  font-size: 14px;
 
   &-label {
     flex: 0 0 100px;
@@ -162,37 +126,5 @@ a {
       text-decoration: underline;
     }
   }
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $spacing;
-}
-
-.mb-1 {
-  margin-bottom: $spacing;
-}
-
-.mb-2 {
-  margin-bottom: $spacing * 2;
-}
-
-.py-1 {
-  padding-top: $spacing;
-  padding-bottom: $spacing;
-}
-
-.py-2 {
-  padding-top: $spacing * 2;
-  padding-bottom: $spacing * 2;
-}
-
-.border-top {
-  border-top: 1px solid #ccc;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #ccc;
 }
 </style>
